@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap');
+
+/* AI Agent System Design - Dark Terminal Aesthetic */
+
+@layer base {
+  :root {
+    /* Digital Consciousness Theme - Glowing Blue & Data */
+    --background: 220 50% 10%;
+    /* Deep Blue Void */
+    --foreground: 200 100% 90%;
+    /* Pale Blue Text */
+
+    --card: 220 40% 10% / 0.7;
+    /* Glass Dark Blue */
+    --card-foreground: 200 100% 90%;
+
+    --popover: 220 40% 10% / 0.8;
+    --popover-foreground: 200 100% 90%;
+
+    --primary: 200 100% 50%;
+    /* Glowing Electric Blue */
+    --primary-foreground: 220 50% 10%;
+
+    --secondary: 220 30% 20%;
+    /* Muted Blue */
+    --secondary-foreground: 200 100% 90%;
+
+    --muted: 220 40% 20% / 0.6;
+    --muted-foreground: 220 30% 70%;
+
+    --accent: 190 100% 60%;
+    /* Bright Cyan Accent */
+    --accent-foreground: 220 50% 10%;
+
+    --destructive: 0 80% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 150 100% 50%;
+    --success-foreground: 220 50% 10%;
+
+    --warning: 35 100% 50%;
+    --warning-foreground: 220 50% 10%;
+
+    --border: 200 100% 50% / 0.3;
+    /* Glowing Blue Border */
+    --input: 220 40% 20% / 0.6;
+    --ring: 200 100% 50%;
+    /* Electric Blue Ring */
+
+    --radius: 0.5rem;
+    /* Tech-standard */
+
+    --sidebar-background: 220 50% 10% / 0.8;
+    --sidebar-foreground: 200 100% 90%;
+    --sidebar-primary: 200 100% 50%;
+    --sidebar-primary-foreground: 220 50% 10%;
+    --sidebar-accent: 220 30% 20%;
+    --sidebar-accent-foreground: 200 100% 90%;
+    --sidebar-border: 200 100% 50% / 0.3;
+    --sidebar-ring: 200 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+    /* Digital Consciousness Background */
+    background-image: url('/digital_consciousness_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent;
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 20px hsl(var(--accent) / 0.3);
+  }
+}
